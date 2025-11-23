@@ -2,7 +2,7 @@ import React from "react";
 import { nanoid } from 'nanoid'
 import styles from './PhoneBook.module.css'
 import { useDispatch } from "react-redux";
-import { AddContasts } from "../../redux/actions";
+import { AddContasts } from "../../redux/ContactsSlice";
 
 const Phonebook = () => {
   const dispatch = useDispatch()
