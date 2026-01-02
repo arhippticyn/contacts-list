@@ -20,7 +20,7 @@ export const FetchContacts = createAsyncThunk(
   "contact/FetchContact",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get("http://127.0.0.1:8000/contact");
+      const response = await axios.get("http://127.0.0.1:8000/contacts");
       return await response.data;
     } catch (error) {
       return rejectWithValue(error.message);

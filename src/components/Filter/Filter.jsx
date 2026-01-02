@@ -5,12 +5,13 @@ import { FilterContacts } from "../../redux/FilterSlice";
 
 const Filter = () => {
   const filter = useSelector(getFilter);
+  console.log(filter, typeof filter);
   const dispatch = useDispatch();
-  const handleFilter = (e) => dispatch(FilterContacts(Number(e.target.value)));
+  const handleFilter = (e) => dispatch(FilterContacts(e.target.value));
   return (
     <div>
       <input
-        type="number"
+        type="text"
         name="filter"
         value={filter}
         onChange={handleFilter}
